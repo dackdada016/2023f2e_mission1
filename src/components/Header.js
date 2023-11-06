@@ -6,38 +6,47 @@ import Youtube from '../assets/images/youtue_icon.svg'
 import styled from 'styled-components'
 
 const StyledHeader = styled.header `
-  *{border:1px solid pink;}
-  width: 100%;
+  border:1px solid rgba(255, 255, 255, 1);
+  border-radius: 1rem;
   display:flex;
   justify-content: space-between;
+  width:100%;
   position: fixed;
-  top: 0;
-  background-color: #FFFFFF;
-`
-const DivLogoSection = styled.div `
+  top: 10px;
+  left: 10px;
+  padding: 0.75rem 1.5rem;
+  backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.9);
-  display:flex;
-  align-items: center;
-  gap:0.5rem;
-  img{
-    width: 50px;
-  }
-  h4{
-    font-size: 1.5rem;
-  }
-`
-const Nav = styled.nav`
-  width: 100%
-  border:1px solid pink;
-  display:flex;
-  ul{
-    padding-inline-start: 0;
+  div {
     display:flex;
-    gap: 1rem;
     align-items: center;
-    li{
-      list-style-type: none;
-      padding:10px;
+    gap:0.5rem;
+    img{
+      width: 50px;
+    }
+    h4{
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgba(218, 125, 74, 1);
+      margin: 0;
+      line-hight: 2.25rem;
+    }
+  }
+  nav {
+    width: 100%
+    border:1px solid pink;
+    display:flex;
+    ul{
+      padding-inline-start: 0;
+      display:flex;
+      gap: 1rem;
+      align-items: center;
+      li{
+        list-style-type: none;
+        ${'' /* padding:10px; */}
+        font-size: 1rem;
+        font-weight: bolder;
+      }
     }
   }
 `
@@ -48,7 +57,6 @@ const DivIconGroup = styled.div`
   a {
     width:2rem;
     margin: 0;
-    padding: 0.5rem 0;
     img{
       width: 2rem;
     }
@@ -58,11 +66,11 @@ const DivIconGroup = styled.div`
 function Header() {
   return (
     <StyledHeader>
-      <DivLogoSection>
+      <div>
         <img src={Logo} alt="競選Logo" />
         <h4>喵立翰 Mioa Li-Han</h4>
-      </DivLogoSection>
-      <Nav>
+      </div>
+      <nav>
         <ul>
           <li>候選人主張</li>
           <li>最新活動</li>
@@ -70,7 +78,7 @@ function Header() {
           <li>小額捐款</li>
           <li>民眾服務信箱</li>
         </ul>
-      </Nav>
+      </nav>
       <DivIconGroup>
         <a href="https://www.facebook.com/">
           <img src={Facebook} alt="link to facebook" />
