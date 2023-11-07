@@ -11,9 +11,9 @@ const StyledHeader = styled.header `
   display:flex;
   justify-content: space-between;
   width:100%;
-  position: fixed;
+  ${'' /* position: fixed;
   top: 10px;
-  left: 10px;
+  left: 10px; */}
   padding: 0.75rem 1.5rem;
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.9);
@@ -43,7 +43,6 @@ const StyledHeader = styled.header `
       align-items: center;
       li{
         list-style-type: none;
-        ${'' /* padding:10px; */}
         font-size: 1rem;
         font-weight: bolder;
       }
