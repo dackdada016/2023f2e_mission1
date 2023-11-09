@@ -6,36 +6,32 @@ import Youtube from '../assets/images/youtue_icon.svg'
 import styled from 'styled-components'
 
 const StyledHeader = styled.header `
-  border:1px solid rgba(255, 255, 255, 1);
-  border-radius: 1rem;
-  display:flex;
-  justify-content: space-between;
-  width:100%;
-  ${'' /* position: fixed;
-  top: 10px;
-  left: 10px; */}
-  padding: 0.75rem 1.5rem;
-  backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.9);
-  div {
-    display:flex;
-    align-items: center;
-    gap:0.5rem;
-    img{
-      width: 50px;
-    }
-    h4{
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: rgba(218, 125, 74, 1);
-      margin: 0;
-      line-hight: 2.25rem;
-    }
-  }
+    width: 100%;
   nav {
-    width: 100%
-    border:1px solid pink;
     display:flex;
+    justify-content: space-between;
+    margin: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    border:1px solid rgba(255, 255, 255, 1);
+    div {
+      width: fix-content;
+      display:flex;
+      align-items: center;
+      gap:0.5rem;
+      img{
+        width: 50px;
+      }
+      h4{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgba(218, 125, 74, 1);
+        margin: 0;
+        line-hight: 2.25rem;
+      }
+    }
     ul{
       padding-inline-start: 0;
       display:flex;
@@ -43,21 +39,23 @@ const StyledHeader = styled.header `
       align-items: center;
       li{
         list-style-type: none;
-        font-size: 1rem;
-        font-weight: bolder;
+        font-size: 1.25rem;
+      }
+      @media (max-width: 768px) {
+      ${'' /* width: 343px;
+      height: 255px; */}
+      }
+      @media (min-width: 993px) {
+        ${'' /* width: 723px; 
+        height: 538px; */}
       }
     }
-  }
-`
-const DivIconGroup = styled.div`
-  display:flex;
-  align-items: center;
-  gap: 1rem;
-  a {
-    width:2rem;
-    margin: 0;
-    img{
-      width: 2rem;
+    a {
+      width:2rem;
+      margin: 0;
+      img{
+        width: 2rem;
+      }
     }
   }
 `
@@ -65,11 +63,11 @@ const DivIconGroup = styled.div`
 function Header() {
   return (
     <StyledHeader>
-      <div>
-        <img src={Logo} alt="競選Logo" />
-        <h4>喵立翰 Mioa Li-Han</h4>
-      </div>
       <nav>
+        <div>
+          <img src={Logo} alt="競選Logo" />
+          <h4>喵立翰 Mioa Li-Han</h4>
+        </div>
         <ul>
           <li>候選人主張</li>
           <li>最新活動</li>
@@ -77,18 +75,18 @@ function Header() {
           <li>小額捐款</li>
           <li>民眾服務信箱</li>
         </ul>
+          <div>
+            <a href="https://www.facebook.com/">
+              <img src={Facebook} alt="link to facebook" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src={Instagram} alt="link to instagram" />
+            </a>
+            <a href="https://www.youtube.com/">
+              <img src={Youtube} alt="link to youtube " />
+            </a>
+          </div>
       </nav>
-      <DivIconGroup>
-        <a href="https://www.facebook.com/">
-          <img src={Facebook} alt="link to facebook" />
-        </a>
-        <a href="https://www.instagram.com/">
-          <img src={Instagram} alt="link to instagram" />
-        </a>
-        <a href="https://www.youtube.com/">
-          <img src={Youtube} alt="link to youtube " />
-        </a>
-      </DivIconGroup>
     </StyledHeader>
   )
 }
