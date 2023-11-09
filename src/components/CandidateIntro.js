@@ -1,6 +1,6 @@
 import React from 'react'
-import CandidateBackground from '../assets/images/candidateBackground.png'
-import Candidates from '../assets/images/image 5.png'
+import CandidateBackground from '../assets/images/Group-14.svg'
+import Candidates from '../assets/images/image 5.svg'
 import styled , { keyframes } from 'styled-components'
 
 const animateSlideUp = keyframes`
@@ -21,19 +21,26 @@ const CandidateIntroSection = styled.section`
   background-color: rgba(255, 255, 255, 1);
 `
 const CandidateIntroTitle = styled.div`
-  margin: 4rem 0px 1rem 0px;
   display:flex;
   flex-direction: column;
   align-items: center;
   h2{
     margin: 0;
-    font:400 6rem 'Mantou Sans';
-    background: -webkit-linear-gradient(90deg, #E6793B 1.54%, #FF4185 97.86%);
+    font:400 3.25rem 'Mantou Sans';
+    width: fit-content;
+    background: -webkit-linear-gradient(45deg, #E6793B 1.54%, #FF4185 97.86%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     animation: ${animateSlideUp} 3s forwards;
     animation-fill-mode: both;
+    white-space: pre-line;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 105%;
+    @media (min-width: 993px) {
+      font-size: 6rem;
+    }
   }
   div {
     margin: auto;
@@ -44,10 +51,9 @@ const CandidateIntroTitle = styled.div`
       background-color: rgba(51, 65, 85, 1);
       color:rgba(255, 255, 255, 1);
       border-radius: 1rem;
-      padding: 0.375rem 0.5rem;
-      font-size: 1.7rem;
-      margin-block-start: 0;
-      margin-block-end: 0;
+      padding: 0.75rem 1rem;
+      font-size: 1.75rem;
+      width:fit-content;
     }
   }
 `
@@ -82,29 +88,45 @@ const CandidateName = styled.div`
 `
 
 const CandidateImage = styled.figure`
-  margin: auto;
-  width: clamp(50%, 100px, 50%);
-  height: 500px;
-  position: relative;
-  img{
-    width: clamp(90%, 10%, 100%);
-    position: absolute;
-    bottom:-1px;
-    left: 5%;
+  *{
+    border:1px solid pink;
   }
-  img:last-child{
-    width: clamp(50%, 10%, 50%);
+  margin: auto;
+  width: 723px; 
+  height: 538px;
+  position: relative;
+  &::before{
+    content:"";
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: -1px;
-    left: 25%;
+    top: 16%;
+    background: no-repeat center/90% url(${CandidateBackground});
+  }
+  @media (max-width: 768px) {
+    width: 343px;
+    height: 255px;
+  }
+  @media (min-width: 993px) {
+    width: 723px; 
+    height: 538px;
+  }
+
+  img{
+    width: 723px; 
+    height: 538px;
     animation: ${animateSlideUp} 3s forwards;
     animation-delay: 1.5s;
     animation-fill-mode: both;
+    @media (max-width: 768px) {
+      width: 343px;
+      height: 255px;
+    }
   }
+
 `
 const Slogan = styled.aside`
   display:flex;
-  flex-shrink: 1;
   justify-content: space-between;
   gap: 1.5rem;
   background-color: rgba(218, 125, 74, 1);
@@ -113,11 +135,9 @@ const Slogan = styled.aside`
     margin: 0;
     font-family:'Mantou Sans';
     font-size: 4rem;
-    line-height: 67px;
     font-weight: 400;
     letter-spacing: 2px;
     text-align: center;
-
     color: rgba(255, 255, 255, 1);
   }
 `
@@ -136,7 +156,6 @@ function CandidateIntro() {
           </div>
         </CandidateIntroTitle>
         <CandidateImage>
-          <img src={CandidateBackground} alt="候選人形象照背景" />
           <img src={Candidates} alt="候選人形象照" />
         </CandidateImage>
       </CandidateIntroSection>
