@@ -88,9 +88,6 @@ const CandidateName = styled.div`
 `
 
 const CandidateImage = styled.figure`
-  *{
-    border:1px solid pink;
-  }
   margin: auto;
   width: 723px; 
   height: 538px;
