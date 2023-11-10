@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import EventForumPhotos from '../assets/images/台北論壇.png'
+import {LatesEventsData} from '../data/LatesEventsData.js'
+import ArrowIcon from '../assets/images/arrow_forward.svg'
 
 const LatestEventsSection = styled.section`
-  ${'' /* *{  border:1px solid pink;
-  } */}
   display:flex;
   flex-direction:column;
   align-items: center;
@@ -14,9 +14,14 @@ const LatestEventsSection = styled.section`
   background-color:rgba(255, 255, 255, 1);
 `
 const Section = styled.section`
+  width: 80%;
   display:flex;
+  flex-direction:column;
   justify-content: space-between;
   gap:1.5rem;
+  @media (min-width: 993px) {
+    flex-direction:row;
+  }
 `
 
 const LatestEventsTitle = styled.div`
@@ -42,35 +47,96 @@ const LatestEventsTitle = styled.div`
   }
 `
 const EventCard = styled.article`
-  width: 50%;
+  width: 100%;
   img{
-    width:100%;
+    width: 100%;
   }
   div{
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
     gap:0.5rem;
     padding-top:1rem;
     h5{
       font-size:1.25rem;
       margin:0;
-      line-height:30px
+      line-height:30px;
     }
     p{
       margin:0;
     }
+
   }
 `
-const EventCardList = styled(EventCard)`
-  width:50%;
+const EventCardList = styled.section`
   display:flex;
   flex-direction:column;
-  justify-content:space-around;
+  gap: 1rem;
+  div{
+    display:flex;
+    ${'' /* justify-content:space-between; */}
+    width: 100%;
+    gap: 1rem;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+    div{
+      flex-direction:column;
+      gap: 0.5rem;
+      h5{
+        font-size:1.25rem;
+        line-height: normal;
+        letter-spacing: normal;
+        font-weight: 700;
+        margin:0;
+      }
+      p{
+        margin:0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+    }
+  }
   button{
+    margin: auto 0;
     width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: 500px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    gap: 0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 1rem;
+      height: 1rem;
+    }
+    p{
+      font-size: 1rem;
+      line-height: normal;
+      letter-spacing: normal;
+      font-weight: 700;
+      margin:0;
+      color:rgba(51, 65, 85, 1);
+    }
   }
 `
+// 卡片元件
+const eventElements = LatesEventsData.map((item) => (
+    <div key={item.id}>
+      <img src={item.imgSrc} alt={item.title}/>
+      <div>
+        <span>{item.date}</span>
+        <h5>{item.title}</h5>
+        <p>{item.description}</p>
+      </div>
+    </div>
+));
 
 
 function LatestEvents() {
@@ -90,22 +156,8 @@ function LatestEvents() {
           </div>
         </EventCard>
         <EventCardList>
-          <div class="card">
-            <span>timestamp</span>
-            {/* <h5></h5> */}
-            <p></p>
-          </div>
-          <div class="card">
-            <span>timestamp</span>
-            {/* <h5></h5> */}
-            <p></p>
-          </div>
-          <div class="card">
-            <span>timestamp</span>
-            {/* <h5></h5> */}
-            <p></p>
-          </div>
-          <button><a href="http://more">查看更多</a></button>
+          {eventElements}
+          <button><p>查看更多</p><img src={ArrowIcon} alt='ArrowIcon'/></button>
         </EventCardList>
       </Section>
     </LatestEventsSection>
