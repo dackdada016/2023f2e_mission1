@@ -1,6 +1,6 @@
-import CardImage1 from '../assets/images/保障專案.png'
-import CardImage2 from '../assets/images/休閒天堂.png'
-import CardImage3 from '../assets/images/推廣寵物飼養教育.png'
+import CardImage1 from '../assets/images/保障專案.svg'
+import CardImage2 from '../assets/images/休閒天堂.svg'
+import CardImage3 from '../assets/images/推廣寵物飼養教育.svg'
 
 export const PolicuIssuesData = [
   {
