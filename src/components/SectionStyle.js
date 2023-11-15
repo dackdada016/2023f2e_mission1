@@ -37,8 +37,35 @@ export const SectionList = styled.section`
   display:flex;
   flex-direction:column;
   justify-content: space-between;
+  align-items:center;
   gap:1.5rem;
   @media (min-width: 993px) {
     flex-direction:row;
+    align-items:center;
   }
+`
+export const SectionContentButton = styled.button`
+  margin: auto 0;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border-radius: 500px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  gap: 0.5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+    img{
+      width: 1rem;
+      height: 1rem;
+    }
+    p{
+      text-wrap: nowrap;
+      font-size: 1rem;
+      line-height: normal;
+      letter-spacing: normal;
+      font-weight: 700;
+      margin:0;
+      color:rgba(51, 65, 85, 1);
+    }
 `
