@@ -2,6 +2,7 @@ import React from 'react'
 import CandidateBackground from '../assets/images/Group-14.svg'
 import Candidates from '../assets/images/image 5.svg'
 import styled , { keyframes } from 'styled-components'
+// import { SectionContainer, SectionTitle } from './SectionStyle'
 
 const animateSlideUp = keyframes`
   from {
