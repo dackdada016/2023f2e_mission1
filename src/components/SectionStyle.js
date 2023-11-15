@@ -55,17 +55,18 @@ export const SectionContentButton = styled.button`
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-    img{
-      width: 1rem;
-      height: 1rem;
-    }
-    p{
-      text-wrap: nowrap;
-      font-size: 1rem;
-      line-height: normal;
-      letter-spacing: normal;
-      font-weight: 700;
-      margin:0;
-      color:rgba(51, 65, 85, 1);
-    }
+  cursor: pointer;
+  img{
+    width: 1rem;
+    height: 1rem;
+  }
+  p{
+    text-wrap: nowrap;
+    font-size: 1rem;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 700;
+    margin:0;
+    color:rgba(51, 65, 85, 1);
+  }
 `
