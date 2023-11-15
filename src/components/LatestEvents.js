@@ -15,6 +15,9 @@ const EventCard = styled.article`
     flex-direction:column;
     gap:0.5rem;
     padding-top:1rem;
+    span{
+      color:rgba(148, 163, 184, 1);
+    }
     h5{
       font-size:1.25rem;
       margin:0;
@@ -44,6 +47,9 @@ const EventCardList = styled.section`
     div{
       flex-direction:column;
       gap: 0.5rem;
+      span{
+        color:rgba(148, 163, 184, 1);
+      }
       h5{
         font-size:1.25rem;
         line-height: normal;
@@ -86,7 +92,7 @@ function LatestEvents() {
         <EventCard>
           <img src={EventForumPhotos} alt="參與台北寵物論壇"/>
           <div>
-            <span>Timestamp</span>
+            <span>2023/12/26</span>
             <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
             <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
           </div>
