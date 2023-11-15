@@ -1,12 +1,10 @@
 import React from 'react'
 import Logo from "../assets/images/logo.svg"
-import Instagram from "../assets/images/ig_icon.svg"
-import Facebook from '../assets/images/fb_icon.svg'
-import Youtube from '../assets/images/youtue_icon.svg'
 import styled from 'styled-components'
+import IconGrouo from './IconGrouo'
 
 const StyledHeader = styled.header `
-    width: 100%;
+  width: 100%;
   nav {
     display:flex;
     justify-content: space-between;
@@ -21,9 +19,6 @@ const StyledHeader = styled.header `
       display:flex;
       align-items: center;
       gap:0.5rem;
-      img{
-        width: 50px;
-      }
       h4{
         font-size: 1.5rem;
         font-weight: 700;
@@ -50,13 +45,13 @@ const StyledHeader = styled.header `
         height: 538px; */}
       }
     }
-    a {
+    ${'' /* a {
       width:2rem;
       margin: 0;
       img{
         width: 2rem;
       }
-    }
+    } */}
   }
 `
 
@@ -76,15 +71,7 @@ function Header() {
           <li>民眾服務信箱</li>
         </ul>
           <div>
-            <a href="https://www.facebook.com/">
-              <img src={Facebook} alt="link to facebook" />
-            </a>
-            <a href="https://www.instagram.com/">
-              <img src={Instagram} alt="link to instagram" />
-            </a>
-            <a href="https://www.youtube.com/">
-              <img src={Youtube} alt="link to youtube " />
-            </a>
+            <IconGrouo />
           </div>
       </nav>
     </StyledHeader>
