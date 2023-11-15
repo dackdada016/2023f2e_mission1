@@ -3,24 +3,44 @@ import styled from 'styled-components'
 import { PolicuIssuesData } from '../data/PolicuIssiesData.js'
 import { SectionContainer, SectionTitle, SectionList } from './SectionStyle.js';
 
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  div{
+    h4{
+      width: 80%;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; /* 2.25rem */
+    }
+  }
+  img{
+    border-radius:1.5rem;
+  }
+`
+
+
 const IssuesCard = PolicuIssuesData.map((item)=>(
-  <div key={item.id}>
+  <Card key={item.id}>
     <div>
       <h4>{item.cardTitle}</h4>
     </div>
-    <img src={item.imgSrc} alt={item.description}/>
-  </div>
+    <img src={item.imgSrc} alt={item.description} />
+  </Card>
 ));
 
 
 function PolicuIssues() {
   return (
-    <SectionContainer>
+    <SectionContainer style={{backgroundColor:'#FDFCFB',padding:"104px 0"}}>
       <SectionTitle>
         <span>policu issues</span>
         <h2>政策議題</h2>
       </SectionTitle>
-      <SectionList>
+      <SectionList >
         {IssuesCard}
       </SectionList>
     </SectionContainer>
