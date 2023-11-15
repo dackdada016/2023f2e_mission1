@@ -8,7 +8,7 @@ const IssuesCard = PolicuIssuesData.map((item)=>(
     <div>
       <h4>{item.cardTitle}</h4>
     </div>
-    <img src={item.imgSrc} alt={item.description} />
+    <img src={item.imgSrc} alt={item.description}/>
   </div>
 ));
 
