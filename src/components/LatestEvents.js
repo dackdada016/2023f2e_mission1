@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import EventForumPhotos from '../assets/images/台北論壇.png'
 import {LatesEventsData} from '../data/LatesEventsData.js'
 import ArrowIcon from '../assets/images/arrow_forward.svg'
-import { SectionContainer, SectionTitle, SectionList } from './SectionStyle.js';
+import { SectionContainer, SectionTitle, SectionList, SectionContentButton } from './SectionStyle.js';
 
 const EventCard = styled.article`
   width: 100%;
@@ -61,29 +61,6 @@ const EventCardList = styled.section`
       }
     }
   }
-  button{
-    margin: auto 0;
-    width: fit-content;
-    padding: 1rem 1.5rem;
-    border-radius: 500px;
-    border: 1px solid rgba(255, 255, 255, 1);
-    gap: 0.5rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    img{
-      width: 1rem;
-      height: 1rem;
-    }
-    p{
-      font-size: 1rem;
-      line-height: normal;
-      letter-spacing: normal;
-      font-weight: 700;
-      margin:0;
-      color:rgba(51, 65, 85, 1);
-    }
-  }
 `
 // 卡片元件
 const eventElements = LatesEventsData.map((item) => (
@@ -105,12 +82,10 @@ function LatestEvents() {
         <span>letest events</span>
         <h2>最新活動</h2>
       </SectionTitle>
-      <SectionList>
+      <SectionList style={{alignItems:'flex-start'}}>
         <EventCard>
           <img src={EventForumPhotos} alt="參與台北寵物論壇"/>
           <div>
-
-          
             <span>Timestamp</span>
             <h5>參與台北寵物論壇，爭取貓咪友善環境</h5>
             <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
@@ -118,7 +93,7 @@ function LatestEvents() {
         </EventCard>
         <EventCardList>
           {eventElements}
-          <button><p>查看更多</p><img src={ArrowIcon} alt='ArrowIcon'/></button>
+          <SectionContentButton><p>查看更多</p><img src={ArrowIcon} alt='ArrowIcon'/></SectionContentButton>
         </EventCardList>
       </SectionList>
     </SectionContainer>
