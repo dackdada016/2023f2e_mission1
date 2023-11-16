@@ -6,7 +6,7 @@ import CandidateImage from '../assets/images/candidateImage.png'
 const AdvocateCard = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  ${'' /* width: 80%; */}
   margin: 40px auto;
   justify-content: space-between;
   align-items: center;
