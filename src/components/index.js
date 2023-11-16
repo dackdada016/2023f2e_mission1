@@ -5,6 +5,7 @@ import Advocate from './Advocate';
 import LatestEvents from './LatestEvents';
 import PolicuIssues from './PolicuIssues'
 import SupportAndFeedback from './SupportAndFeedback';
+import IdentificationSlogan from './IdentificationSlogan';
 import Footer from './Footer';
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
         <LatestEvents />
         <PolicuIssues />
         <SupportAndFeedback />
+        <IdentificationSlogan />
       </main>
       <Footer />
     </>
