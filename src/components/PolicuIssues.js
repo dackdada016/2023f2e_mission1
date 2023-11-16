@@ -8,13 +8,16 @@ const Card = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: fit-content;
+  margin: 4rem 0;
   div{
     h4{
       width: 80%;
+      margin: 0;
       font-size: 1.5rem;
       font-style: normal;
       font-weight: 700;
-      line-height: 150%; /* 2.25rem */
+      line-height: 150%;
+      padding: 0 1rem 1rem 1rem;
     }
   }
   img{
@@ -35,12 +38,12 @@ const IssuesCard = PolicuIssuesData.map((item)=>(
 
 function PolicuIssues() {
   return (
-    <SectionContainer style={{backgroundColor:'#FDFCFB',padding:"104px 0"}}>
+    <SectionContainer style={{backgroundColor:'#FDFCFB'}}>
       <SectionTitle>
         <span>policu issues</span>
         <h2>政策議題</h2>
       </SectionTitle>
-      <SectionList >
+      <SectionList>
         {IssuesCard}
       </SectionList>
     </SectionContainer>
