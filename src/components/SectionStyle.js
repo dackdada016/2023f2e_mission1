@@ -5,7 +5,7 @@ export const SectionContainer = styled.section`
   flex-direction:column;
   align-items: center;
   margin:auto;
-  padding:40px 0;
+  padding: 104px 18.75rem;
   gap:1.5rem;
   background-color:rgba(255, 255, 255, 1);
 `
@@ -14,7 +14,9 @@ export const SectionTitle = styled.div`
   flex-direction:column;
   align-items: center;
   margin:auto;
+  width: 100%;
   span{
+    text-transform: uppercase;
     font-weight: 600;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
@@ -33,7 +35,6 @@ export const SectionTitle = styled.div`
 `
 
 export const SectionList = styled.section`
-  width: 80%;
   display:flex;
   flex-direction:column;
   justify-content: space-between;
