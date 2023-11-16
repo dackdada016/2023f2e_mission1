@@ -15,16 +15,16 @@ const Group = styled.div`
   }
 `
 
-function IconGrouo() {
+function IconGrouo(props) {
   return (
-    <Group>
-      <a href="https://www.facebook.com/">
+    <Group >
+      <a href="https://www.facebook.com/" style={props.style}>
         <img src={Facebook} alt="link to facebook" />
       </a>
-      <a href="https://www.instagram.com/">
+      <a href="https://www.instagram.com/" style={props.style}>
         <img src={Instagram} alt="link to instagram" />
       </a>
-      <a href="https://www.youtube.com/">
+      <a href="https://www.youtube.com/" style={props.style}>
         <img src={Youtube} alt="link to youtube " />
       </a>
     </Group>
