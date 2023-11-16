@@ -2,6 +2,8 @@ import React from 'react'
 import CandidateBackground from '../assets/images/Group-14.svg'
 import Candidates from '../assets/images/image 5.svg'
 import styled , { keyframes } from 'styled-components'
+import { SectionContainer, SectionTitle, SectionList } from './SectionStyle.js';
+
 // import { SectionContainer, SectionTitle } from './SectionStyle'
 
 const animateSlideUp = keyframes`
@@ -16,6 +18,7 @@ const animateSlideUp = keyframes`
 `;
 const CandidateIntroSection = styled.section`
   margin: auto;
+  padding-top: 6rem;
   display:flex;
   flex-direction: column;
   gap: 0.5rem; 
@@ -143,7 +146,7 @@ const Slogan = styled.aside`
 function CandidateIntro() {
   return (
     <>
-      <CandidateIntroSection>
+      <SectionContainer style={{paddingBottom:"0"}}>
         <CandidateIntroTitle>
           <h2>台灣的明天 喵先鋪路</h2>
           <div>
@@ -156,7 +159,7 @@ function CandidateIntro() {
         <CandidateImage>
           <img src={Candidates} alt="候選人形象照" />
         </CandidateImage>
-      </CandidateIntroSection>
+      </SectionContainer>
       <Slogan>
         <p>為喵星人，護台灣!</p>
         <p>從喵的眼中，看見台灣</p>
