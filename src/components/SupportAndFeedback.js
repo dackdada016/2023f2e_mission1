@@ -40,19 +40,17 @@ const DonateImageContent = styled.div`
   gap:0.5rem;
   div{
     img{
-      height: 15.0625rem;
+      height: 15rem;
       flex: 1 0 0;
     }
   }
 `
 const FeedbackImageContent = styled(DonateImageContent)`
-  height: 15.0625rem;
-  align-items: center;
-  gap: var(--spacer-8, 0.5rem);
+  height: 14rem;
   div{
     img{
-      width: 16rem;
-      height: 10.9375rem;
+      width: 15rem;
+      height: 10rem;
       flex-shrink: 0;
     }
   }
