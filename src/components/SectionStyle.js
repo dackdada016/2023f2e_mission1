@@ -5,7 +5,8 @@ export const SectionContainer = styled.section`
   flex-direction:column;
   align-items: center;
   margin:auto;
-  padding: 104px 18.75rem;
+  ${'' /* justify-content: center */}
+  padding: 104px 10%;
   gap:1.5rem;
   background-color:rgba(255, 255, 255, 1);
 `

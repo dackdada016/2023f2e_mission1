@@ -1,6 +1,6 @@
-import Cover from '../assets/images/cover.png'
-import CoverCat from '../assets/images/covercat.png'
-import CoverCatFirst from '../assets/images/covercatFirst.png'
+import Cover from '../assets/images/cover.svg'
+import CoverCat from '../assets/images/coverCat.svg'
+import CoverCatFirst from '../assets/images/coverCatFirst.svg'
 
 export const LatesEventsData = [
   {
