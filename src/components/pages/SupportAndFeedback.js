@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import ArrowIcon from '../assets/images/arrow_forward.svg'
-import MailBox from '../assets/images/mailBox.svg'
-import DonateHand from '../assets/images/donate.png'
-import { SectionContainer, SectionList, SectionContentButton } from './SectionStyle.js';
+import ArrowIcon from '../../assets/images/arrow_forward.svg'
+import MailBox from '../../assets/images/mailBox.svg'
+import DonateHand from '../../assets/images/donate.png'
+import { SectionContainer, SectionList, SectionContentButton } from '../SectionStyle.js';
 
 const DonateCard = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import React from 'react'
-import Instagram from "../assets/images/ig_icon.svg"
-import Facebook from '../assets/images/fb_icon.svg'
-import Youtube from '../assets/images/youtue_icon.svg'
+import Instagram from "../../assets/images/ig_icon.svg"
+import Facebook from '../../assets/images/fb_icon.svg'
+import Youtube from '../../assets/images/youtue_icon.svg'
 import styled from 'styled-components'
 
 const Group = styled.div`

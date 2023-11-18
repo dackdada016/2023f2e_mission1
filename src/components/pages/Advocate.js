@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SectionContainer, SectionTitle } from './SectionStyle.js';
-import CandidateImage from '../assets/images/candidateImage.png'
+import { SectionContainer, SectionTitle } from '../SectionStyle';
+import CandidateImage from '../../assets/images/candidateImage.png'
 
 const AdvocateCard = styled.div`
   display: flex;

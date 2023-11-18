@@ -1,5 +1,5 @@
 import React from 'react'
-import IconGrouo from './IconGrouo'
+import IconGrouo from '../icon/IconGrouo'
 import styled from 'styled-components'
 // import { SectionContainer } from './SectionStyle'
 

@@ -7,7 +7,7 @@ import PolicuIssues from './PolicuIssues'
 import SupportAndFeedback from './SupportAndFeedback';
 import IdentificationSlogan from './IdentificationSlogan';
 import Footer from './Footer';
-import { ModalProvider } from './modal/ModalProvider';
+import { ModalProvider } from '../modal/ModalProvider';
 function Home() {
   return (
     <ModalProvider>

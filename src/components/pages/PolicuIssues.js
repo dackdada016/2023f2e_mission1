@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PolicuIssuesData } from '../data/PolicuIssiesData.js'
-import { SectionContainer, SectionTitle, SectionList } from './SectionStyle.js';
+import { PolicuIssuesData } from '../../data/PolicuIssiesData.js'
+import { SectionContainer, SectionTitle, SectionList } from '../SectionStyle.js';
 
 const Card = styled.div`
   display: flex;
