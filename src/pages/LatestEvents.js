@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import {LatesEventsData} from '../../data/LatesEventsData.js'
-import ArrowIcon from '../../assets/images/arrow_forward.svg'
-import { SectionContainer, SectionTitle, SectionList, SectionContentButton } from '../SectionStyle.js';
-import EventCard from '../card/EventCard.js';
-import EventsList from '../card/EventsList.js';
+import {LatesEventsData} from '../data/LatesEventsData.js'
+import ArrowIcon from '../assets/images/arrow_forward.svg'
+import { SectionContainer, SectionTitle, SectionList, SectionContentButton } from '../components/SectionStyle.js';
+import EventCard from '../components/card/EventCard.js';
+import EventsList from '../components/card/EventsList.js';
 
 // 卡片元件
 const eventElements = LatesEventsData.map((item) => (

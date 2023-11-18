@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SectionContainer, SectionTitle } from '../SectionStyle';
-import CandidateImage from '../../assets/images/candidateImage.png'
+import { SectionContainer, SectionTitle } from '../components/SectionStyle';
+import CandidateImage from '../assets/images/candidateImage.png'
 
 const AdvocateCard = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ function Advocate() {
           </CandidateStatement>
         </SectionTitle>
         <CandidateImageFigure>
-          <img src={CandidateImage} />
+          <img src={CandidateImage} alt='候選人形象照'/>
         </CandidateImageFigure>
       </AdvocateCard>
     </SectionContainer>

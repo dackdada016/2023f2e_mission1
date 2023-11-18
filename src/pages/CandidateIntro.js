@@ -1,10 +1,8 @@
 import React from 'react'
-import CandidateBackground from '../../assets/images/Group-14.svg'
-import Candidates from '../../assets/images/image 5.svg'
+import CandidateBackground from '../assets/images/Group-14.svg'
+import Candidates from '../assets/images/image 5.svg'
 import styled , { keyframes } from 'styled-components'
-import { SectionContainer, SectionTitle, SectionList } from '../SectionStyle.js';
-
-// import { SectionContainer, SectionTitle } from './SectionStyle'
+import { SectionContainer } from '../components/SectionStyle.js';
 
 const animateSlideUp = keyframes`
   from {
@@ -16,14 +14,14 @@ const animateSlideUp = keyframes`
     transform: translateY(0);
   }
 `;
-const CandidateIntroSection = styled.section`
-  margin: auto;
-  padding-top: 6rem;
-  display:flex;
-  flex-direction: column;
-  gap: 0.5rem; 
-  background-color: rgba(255, 255, 255, 1);
-`
+// const CandidateIntroSection = styled.section`
+//   margin: auto;
+//   padding-top: 6rem;
+//   display:flex;
+//   flex-direction: column;
+//   gap: 0.5rem; 
+//   background-color: rgba(255, 255, 255, 1);
+// `
 const CandidateIntroTitle = styled.div`
   display:flex;
   flex-direction: column;

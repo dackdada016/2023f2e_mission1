@@ -1,5 +1,5 @@
 import React from 'react'
-import IconGrouo from '../icon/IconGrouo'
+import IconGrouo from '../components/icon/IconGrouo'
 import styled from 'styled-components'
 // import { SectionContainer } from './SectionStyle'
 
@@ -74,6 +74,7 @@ const FooterAddress = styled.address`
     line-height: 150%;
   }
   ul {
+    margin: 0;
     list-style-type: none;
     padding-inline-start: 0;
     display: flex;
