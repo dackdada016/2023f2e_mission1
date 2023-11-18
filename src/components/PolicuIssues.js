@@ -25,7 +25,6 @@ const Card = styled.div`
   }
 `
 
-
 const IssuesCard = PolicuIssuesData.map((item)=>(
   <Card key={item.id}>
     <div>
@@ -38,7 +37,7 @@ const IssuesCard = PolicuIssuesData.map((item)=>(
 
 function PolicuIssues() {
   return (
-    <SectionContainer style={{backgroundColor:'#FDFCFB'}}>
+    <SectionContainer style={{backgroundColor:'#FDFCFB',flex: '1 0 0'}}>
       <SectionTitle>
         <span>policu issues</span>
         <h2>政策議題</h2>
