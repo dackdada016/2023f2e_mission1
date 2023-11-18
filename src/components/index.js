@@ -7,10 +7,10 @@ import PolicuIssues from './PolicuIssues'
 import SupportAndFeedback from './SupportAndFeedback';
 import IdentificationSlogan from './IdentificationSlogan';
 import Footer from './Footer';
-
+import { ModalProvider } from './modal/ModalProvider';
 function Home() {
   return (
-    <>
+    <ModalProvider>
       <Header />
       <main>
         <CandidateIntro />
@@ -21,7 +21,7 @@ function Home() {
         <IdentificationSlogan />
       </main>
       <Footer />
-    </>
+    </ModalProvider>
   )
 }
 
