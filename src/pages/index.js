@@ -8,6 +8,7 @@ import SupportAndFeedback from './SupportAndFeedback';
 import IdentificationSlogan from './IdentificationSlogan';
 import Footer from './Footer';
 import { ModalProvider } from '../components/modal/ModalProvider.js';
+
 function Home() {
   return (
     <ModalProvider>
