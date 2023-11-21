@@ -5,23 +5,19 @@ const ModalContext = createContext();
 export const useModal = () => useContext(ModalContext);
 
 export const  ModalProvider = ({ children }) => {
-  const [ activeModal, setActiveModal ] = useState(null);
-  const openModal = (modalId) => {
-    setActiveModal(modalId)
+  // const [ activeModal, setActiveModal ] = useState(null);
+  const [ modalConfig, setModalConfig ] = useState({ component: null, props:{} }) 
+  const openModal = (config) => {
+    setModalConfig(config)
   };
   const closeModal = () => {
-    setActiveModal(null)
+    setModalConfig({ component: null, props:{} })
   };
+  const { component: ModalComponent, props: modalProps } = modalConfig
   return(
-    <ModalContext.Provider value={{ activeModal, openModal, closeModal}} >
+    <ModalContext.Provider value={{ modalConfig, openModal, closeModal}} >
       {children}
+    {ModalComponent && <ModalComponent {...modalProps} />}
     </ModalContext.Provider>
   )
 };
-
-  
-
-  
-
-
-
