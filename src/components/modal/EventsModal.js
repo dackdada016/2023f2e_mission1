@@ -1,7 +1,5 @@
 import { useModal } from './ModalProvider'
-import ModalStyle from './ModalStyle.js'
 import CancelButton from '../../assets/images/cancelbutton.svg'
-import styled from 'styled-components'
 import IconGrouo from '../icon/IconGrouo.js'
 import { ModalBackdrop, ModalContainer, ModalContent, ModalImageSection, ModalTextContent, ModalTitle, MoreSection} from './ModalStyle.js'
 
