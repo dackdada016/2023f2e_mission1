@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.43bd37bd.css",
+    "main.js": "/static/js/main.f32686f0.js",
+    "static/js/787.d8086f27.chunk.js": "/static/js/787.d8086f27.chunk.js",
+    "static/media/cover.svg": "/static/media/cover.d58368b92b107fdd23d68c46b2b0b97c.svg",
+    "static/media/coverCatFirst.svg": "/static/media/coverCatFirst.5cf0766798700599254bc6a1894bfed6.svg",
+    "static/media/coverCat.svg": "/static/media/coverCat.3a294c3b544201b7db51bbf93708a1b9.svg",
+    "static/media/MantouSans-Regular.ttf": "/static/media/MantouSans-Regular.dbec1faa4eab2d4d8629.ttf",
+    "static/media/candidateImage.png": "/static/media/candidateImage.89e683b7482af55a22a8.png",
+    "static/media/image 5.svg": "/static/media/image 5.2dfd674b1d6b66eccaab3b70f1956a34.svg",
+    "static/media/保障專案.svg": "/static/media/保障專案.8fda817c05e16340a4f461609e983379.svg",
+    "static/media/休閒天堂.svg": "/static/media/休閒天堂.bedf9deaae1cef9aeb05a0027cd18546.svg",
+    "static/media/推廣寵物飼養教育.svg": "/static/media/推廣寵物飼養教育.4e89114038b8b15f046037df0fdb41bf.svg",
+    "static/media/mailBox.svg": "/static/media/mailBox.c3ab141cd2609e0d878a8d3997618e2d.svg",
+    "static/media/donate.png": "/static/media/donate.3f9e62f76208033bd951.png",
+    "static/media/Group-14.svg": "/static/media/Group-14.629093304c365347cddbd41a10bf37fd.svg",
+    "static/media/ig_icon.svg": "/static/media/ig_icon.696e6db423c0c2bc877cc7ec659923c4.svg",
+    "index.html": "/index.html",
+    "static/media/logo.svg": "/static/media/logo.8a40e2a74c44bf2b001b126c119b9f8c.svg",
+    "static/media/youtue_icon.svg": "/static/media/youtue_icon.d364895825be90c06c47cfeee01bd12c.svg",
+    "static/media/cancelbutton.svg": "/static/media/cancelbutton.3b4595bedfaf19c913f2a08ecfa3da06.svg",
+    "static/media/fb_icon.svg": "/static/media/fb_icon.1fee526f6377c0713f0dfd8ec924f1de.svg",
+    "static/media/arrow_forward.svg": "/static/media/arrow_forward.fe5ce1a45a0548aa0aa87fa8900cae92.svg",
+    "main.43bd37bd.css.map": "/static/css/main.43bd37bd.css.map",
+    "main.f32686f0.js.map": "/static/js/main.f32686f0.js.map",
+    "787.d8086f27.chunk.js.map": "/static/js/787.d8086f27.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43bd37bd.css",
+    "static/js/main.f32686f0.js"
+  ]
+}
