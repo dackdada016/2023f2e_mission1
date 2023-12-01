@@ -11,7 +11,6 @@ export const ModalBackdrop  = styled.div`
 `
 
 export const ModalContainer = styled.div`
-  *{border:1px solid pink;}
   background-color:rgb(255,255,255);
   position: absolute;
   top: calc( 50% - 25rem );
@@ -22,7 +21,7 @@ export const ModalContainer = styled.div`
   height: 50rem;
   border-radius: var(--spacer-24, 1.5rem);
   align-items: flex-start;
-  gap: var(--spacer-32, 2rem);
+  gap: var(--spacer-32, 1rem);
   padding: var(--spacer-24, 1.5rem) var(--spacer-48, 3rem);
 `
 export const ModalContent = styled.section`
