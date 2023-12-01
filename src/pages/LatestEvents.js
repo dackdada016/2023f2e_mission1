@@ -5,7 +5,7 @@ import ArrowIcon from '../assets/images/arrow_forward.svg'
 import { SectionContainer, SectionTitle, SectionList, SectionContentButton } from '../components/SectionStyle.js';
 import EventCard from '../components/card/EventCard.js';
 import EventsList from '../components/card/EventsList.js';
-import { useModal } from '../components/modal/ModalProvider.js';
+import { useModal } from '../components/contexts/ModalProvider.js';
 import EventsModal from '../components/modal/EventsModal.js';
 
 // 列表樣式 

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { PolicuIssuesData } from '../data/PolicuIssiesData.js'
 import { SectionContainer, SectionTitle, SectionList } from '../components/SectionStyle.js';
 import PolicuIssuesModal from '../components/modal/PolicuIssuesModal.js';
-import { useModal } from '../components/modal/ModalProvider.js';
+import { useModal } from '../components/contexts/ModalProvider.js';
 
 const Card = styled.div`
   display: flex;
