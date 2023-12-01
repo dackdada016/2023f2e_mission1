@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { PolicuIssuesData } from '../data/PolicuIssiesData.js'
 import { SectionContainer, SectionTitle, SectionList } from '../components/SectionStyle.js';
+import PolicuIssuesModal from '../components/modal/PolicuIssuesModal.js';
+import { useModal } from '../components/modal/ModalProvider.js';
 
 const Card = styled.div`
   display: flex;
@@ -24,18 +26,25 @@ const Card = styled.div`
     border-radius:1.5rem;
   }
 `
-
-const IssuesCard = PolicuIssuesData.map((item)=>(
-  <Card key={item.id}>
-    <div>
-      <h4>{item.cardTitle}</h4>
-    </div>
-    <img src={item.imgSrc} alt={item.description} />
-  </Card>
-));
-
-
 function PolicuIssues() {
+
+  const { openModal } = useModal();
+  const handleOpenModal = (id) => {
+    openModal({
+      component: PolicuIssuesModal,
+      props: { policuIssiesData: PolicuIssuesData, Id: id}
+    });
+  };
+
+  const IssuesCard = PolicuIssuesData.map((item)=>(
+    <Card key={item.id} onClick={()=> handleOpenModal(item.id)}>
+      <div>
+        <h4>{item.cardTitle}</h4>
+      </div>
+      <img src={item.imgSrc} alt={item.cardTitle} />
+    </Card>
+  ));
+
   return (
     <SectionContainer style={{backgroundColor:'#FDFCFB',flex: '1 0 0'}}>
       <SectionTitle>
