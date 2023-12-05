@@ -9,8 +9,9 @@
 ### 專案架構
 `assets` 為靜態檔案 - 圖片、icon放置處
 
-`components` 為網頁區塊
+`components` 為網頁元件
+`pages` 為網頁頁面
 
 `font`為網頁所使用字型放置處
 
-本篇README隨時更新至投稿完成
+尚未完成功能，先投稿，將陸續完成所有功能

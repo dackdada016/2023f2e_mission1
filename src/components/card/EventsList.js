@@ -5,6 +5,7 @@ const EventCardList = styled.div`
   justify-content: center;
   gap: 1rem; 
   width: 100%;
+  cursor: pointer;
   div:first-child{
     width: 30%;
     img{
@@ -37,9 +38,9 @@ const EventCardList = styled.div`
     }
   }
 `
-function EventsList({children}) {
+function EventsList({children, onClick}) {
   return (
-    <EventCardList>
+    <EventCardList onClick={onClick}>
       {children}
     </EventCardList>
   )

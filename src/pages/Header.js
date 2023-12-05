@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Logo from "../assets/images/logo.svg"
 import styled from 'styled-components'
 import IconGrouo from '../components/icon/IconGrouo'
+import { useModal } from '../components/contexts/ModalProvider.js';
 
 const StyledHeader = styled.header `
   width: 100%;
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  &.hidden {
+    visibility: hidden;
+  }
   nav {
     display:flex;
     justify-content: space-between;
@@ -45,20 +56,29 @@ const StyledHeader = styled.header `
         height: 538px; */}
       }
     }
-    ${'' /* a {
-      width:2rem;
-      margin: 0;
-      img{
-        width: 2rem;
-      }
-    } */}
   }
 `
 
 function Header() {
+  // nav scroll
+  const [isScrolled, setScrolled] = useState(false);
+  const navRef = useRef(null);
+  useEffect(()=>{
+    const navHeight = navRef.current?.offsetHeight;
+    const handleScroll = () => {
+      setScrolled(window.scrollY > navHeight);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [])
+  // if the modal is open, the navbar should be hidden.
+  const { modalConfig } = useModal();
+  const isModalOpen = modalConfig.component !== null;
   return (
-    <StyledHeader>
-      <nav>
+    <StyledHeader className={ isModalOpen ? 'hidden' : ''}>
+      <nav ref={navRef} className={isScrolled ? 'fixed-nav' : ''}>
         <div>
           <img src={Logo} alt="競選Logo" />
           <h4>喵立翰 Mioa Li-Han</h4>
