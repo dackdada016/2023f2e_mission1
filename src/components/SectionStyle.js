@@ -41,6 +41,7 @@ export const SectionList = styled.section`
   justify-content: space-between;
   align-items:center;
   gap:1.5rem;
+  width:100%;
   @media (min-width: 993px) {
     flex-direction:row;
     align-items:center;

@@ -39,12 +39,10 @@ const Card = styled.article`
 
 `
 
-
-
 function EventCard({ cardContent: { imgSrc, date, title, description } }) {
   return (
     <Card>
-      <img src={imgSrc} alt="參與台北寵物論壇"/>
+      <img src={imgSrc} alt={title}/>
       <div>
         <span>{date}</span>
         <h5>{title}</h5>
